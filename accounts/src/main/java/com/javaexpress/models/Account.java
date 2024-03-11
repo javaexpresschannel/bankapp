@@ -1,27 +1,27 @@
-package com.javaexpress.cards.model;
+package com.javaexpress.models;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Setter
 @Getter
-public class Cards {
+@NoArgsConstructor
+public class Account {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long cardId;
+	private Long accountNumber;
 	private int customerId;
-	private String cardNumber;
-	private String cardType;
-	private int totalLimit;
-	private int amountUsed;
-	private int availableAmount;
-	private Date createDt;
+	private String accountType;
+	private String branchAddress;
+	private LocalDate createDt;
+	
 }

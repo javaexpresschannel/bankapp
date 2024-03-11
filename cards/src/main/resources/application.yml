@@ -1,0 +1,15 @@
+server:
+  port: 9002
+spring:
+  datasource:
+    password: cards123
+    url: jdbc:h2:mem:cardsdb
+    username: cards
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+  application:
+    name: CARDS
